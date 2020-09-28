@@ -1,0 +1,32 @@
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+body {
+    background: black;
+    --line-width: 10px;
+}
+
+#xline,
+#yline {
+    position: absolute;
+    background-color: burlywood;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#xline {
+    height: var(--line-width);
+    width: 100%;
+}
+
+#yline {
+    height: 100%;
+    width: var(--line-width);
+}
