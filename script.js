@@ -1,6 +1,22 @@
+
 /* First variant */
 
-xline.onmousedown = function (event) {
+function moveAt(pageY, pageX) {
+  xline.style.top = pageY + 'px';
+  yline.style.left = pageX + 'px';
+}
+
+function onMouseMove(event) {
+  moveAt(event.pageY, event.pageX);
+}
+
+document.addEventListener('mousemove', onMouseMove);
+
+
+
+/* Second variant */
+
+/*xline.onmousedown = function (event) {
 
   let shiftY = event.clientY - xline.getBoundingClientRect().top;
 
@@ -17,11 +33,11 @@ xline.onmousedown = function (event) {
   }
 
   document.addEventListener('mousemove', onMouseMove);
-};
+};*/
 
 //////
 
-yline.onmousedown = function (event) {
+/*yline.onmousedown = function (event) {
 
   let shiftX = event.clientX - yline.getBoundingClientRect().left;
 
@@ -40,7 +56,10 @@ yline.onmousedown = function (event) {
 
   document.addEventListener('mousemove', onMouseMove);
 
-}
+}*/
+
+
+
 
 
 
